@@ -32,8 +32,6 @@ li {
 li:hover {
     background: #D3D3D3;
     color: white;
-    /* height: 7vh;
-    line-height: 7vh; */
 }
 
 #map {
@@ -41,20 +39,74 @@ li:hover {
     height: 100vh;
 }
 
-#omb {
-    background-image: url('https://i2.wp.com/www.comerdistributing.com/wp-content/uploads/2015/11/olde-meck-brew-logo-OMB2.jpg?w=1080');
+.marker {
     background-size: cover;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     cursor: pointer;
 }
 
-#sc {
+#ombMark {
+    background-image: url('https://i2.wp.com/www.comerdistributing.com/wp-content/uploads/2015/11/olde-meck-brew-logo-OMB2.jpg?w=1080');
+}
+
+#scMark {
     background-image: url('http://qcbrewfest.com/wp-content/uploads/2015/06/SugarCreek_Logo-300x300.jpg');
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
+}
+
+#cccMark {
+    background-image: url('http://www.charlottemag.com/Blogs/On-Tap/August-2013/Two-Charlotte-breweries-celebrating-anniversaries-this-weekend/tripcsplashlogo.png'); 
+}
+
+#lennyMark {
+    background-image: url('http://www.discoverlennyboy.com/uploads/7/7/7/7/77779852/1466628780.png');
+}
+
+#sycMark {
+    background-image: url('http://chillertron.com/wp-content/uploads/2015/08/Sycamore-Brewery-north-carolina.jpg');
+}
+
+#wbMark {
+    background-image: url('https://media.bizj.us/view/img/9098592/wooden-robot-logo-2016*750xx1037-1380-158-0.jpg');
+}
+
+#unkMark {
+    background-image: url('https://lh4.ggpht.com/p86PezZTh1rdT5PMgKBEwCtf6Gaoc3heriCj7EUZ_sPk7ayqfyQBlHBNv3LwFeWaWK_CLSxWdZFR7ASjbJeuMzFj81T-Ew=s750');
+}
+
+#legMark {
+    background-image: url('https://pbs.twimg.com/profile_images/570610497175552000/35ZtZW7J.png');
+}
+
+#birdMark {
+    background-image: url('https://istopforhops.files.wordpress.com/2015/04/2015-04-28-19-32-18.jpg');
+}
+
+#nodaMark {
+    background-image: url('http://qcbrewfest.com/wp-content/uploads/2015/06/NoDa_logo-300x300.jpg');
+}
+
+#frMark {
+    background-image: url('https://pbs.twimg.com/profile_images/661277608433180672/1l-EWGFo.jpg');
+}
+
+#tnMark {
+    background-image: url('http://charlotte.carpediem.cd/data/afisha/o/b2/a8/b2a86ab297.jpg');
+}
+
+#blublMark {
+    background-image: url('http://www.workforyourbeer.com/uploads/2/9/2/5/2925296/blue-blaze-brewing.jpg');
+}
+
+#heistMark {
+    background-image: url('https://heistbrewery2.files.wordpress.com/2014/07/flag1.png');
+}
+
+#resculMark {
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/cba1a040216885.579266dd59c27.png');  
+}
+
+#saludMark {
+    background-image: url('http://www.charlottebeer.com/wp-content/uploads/2012/02/Salud-Beer-Shop-Logo-1024x940.jpg');  
 }
