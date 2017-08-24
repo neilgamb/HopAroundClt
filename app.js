@@ -7,12 +7,42 @@ window.addEventListener('load', function () {
     const map = new mapboxgl.Map({
         container: 'map', // container id
         style: 'mapbox://styles/mapbox/light-v9', //hosted style id
-        center: [-80.8500, 35.2070], // starting position
-        zoom: 13, // starting zoom
+        center: [-80.8700, 35.2070], // starting position
+        zoom: 11, // starting zoom
         maxZoom: 18,
-        minZoom: 12,
-        pitch: 50
+        minZoom: 11,
+        pitch: 0,
+        bearing: 30,
     });
+
+    zoom();
+
+    function zoom() {
+        setTimeout(function () {
+
+            map.flyTo({
+                // These options control the ending camera position: centered at
+                // the target, at zoom level 9, and north up.
+                center: [-80.8700, 35.2070],
+                zoom: 13,
+                pitch: 50,
+                bearing: 0,
+
+                // These options control the flight curve, making it move
+                // slowly and zoom out almost completely before starting
+                // to pan.
+                speed: 0.3, // make the flying slow
+                curve: 1, // change the speed at which it zooms out
+
+                // This can be any easing function: it takes a number between
+                // 0 and 1 and returns another number between 0 and 1.
+                easing: function (t) {
+                    return t;
+                }
+            });
+
+        }, 2000);
+    }
 
     // Brewery GPS Coordinates & Markers
 
@@ -195,8 +225,8 @@ window.addEventListener('load', function () {
 
     let breweries = document.getElementsByTagName('li');
 
-    for(let i = 0; i < breweries.length; i++){
-        breweries[i].addEventListener('click', function(){
+    for (let i = 0; i < breweries.length; i++) {
+        breweries[i].addEventListener('click', function () {
 
             map.flyTo({
                 // These options control the ending camera position: centered at
@@ -204,13 +234,13 @@ window.addEventListener('load', function () {
                 center: eval(this.id),
                 zoom: 16,
                 bearing: 0,
-    
+
                 // These options control the flight curve, making it move
                 // slowly and zoom out almost completely before starting
                 // to pan.
                 speed: 0.7, // make the flying slow
                 curve: 1, // change the speed at which it zooms out
-    
+
                 // This can be any easing function: it takes a number between
                 // 0 and 1 and returns another number between 0 and 1.
                 easing: function (t) {

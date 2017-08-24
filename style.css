@@ -2,7 +2,7 @@ body {
     margin: 0px;
     display: flex;
     flex-direction: row;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Special Elite', cursive;
 }
 
 #nav {
@@ -12,13 +12,15 @@ body {
     width: 300px;
     left: 0px;
     bottom: 0px;
-    /* width: 20%;
-    height: 100vh; */
     border-right: 5px solid white;
     background: #D4AC0D;
     color: white;
-    opacity: .7;
     z-index: 1;
+}
+
+#logo {
+    margin: 0px;
+    padding: 20px;
 }
 
 ul {
@@ -26,11 +28,15 @@ ul {
     margin: 0px;
 }
 
+li:first-child {
+    border-top: 1px solid white;
+}
+
 li {
     list-style: none;
-    height: 6.1vh;
+    height: 5.2vh;
     border-bottom: 1px solid white;
-    line-height: 6.1vh;
+    line-height: 5.2vh;
     vertical-align: middle;
     padding-left: 20px;
 }
