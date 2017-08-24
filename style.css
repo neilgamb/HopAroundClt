@@ -110,3 +110,30 @@ li:hover {
 #saludMark {
     background-image: url('http://www.charlottebeer.com/wp-content/uploads/2012/02/Salud-Beer-Shop-Logo-1024x940.jpg');  
 }
+
+
+.detail {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: block;
+    border-left: 5px solid white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;    
+    background: #212F3C;
+    color: white;
+    position: absolute;
+    height: 200px;
+    width: 700px;
+    right: 0px;
+    bottom: 50px;
+    right: -710px;
+    transition: 2s;
+    opacity: .8;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.active {
+    right: 0px;
+    transition: 2s;
+}
