@@ -193,7 +193,32 @@ window.addEventListener('load', function () {
         .addTo(map);
 
 
+    let breweries = document.getElementsByTagName('li');
 
+    for(let i = 0; i < breweries.length; i++){
+        breweries[i].addEventListener('click', function(){
+
+            map.flyTo({
+                // These options control the ending camera position: centered at
+                // the target, at zoom level 9, and north up.
+                center: eval(this.id),
+                zoom: 16,
+                bearing: 0,
+    
+                // These options control the flight curve, making it move
+                // slowly and zoom out almost completely before starting
+                // to pan.
+                speed: 0.7, // make the flying slow
+                curve: 1, // change the speed at which it zooms out
+    
+                // This can be any easing function: it takes a number between
+                // 0 and 1 and returns another number between 0 and 1.
+                easing: function (t) {
+                    return t;
+                }
+            });
+        })
+    }
 })
 
 function makeBig(x) {
@@ -201,7 +226,7 @@ function makeBig(x) {
     let id = x.id + "Mark"
     document.getElementById(id).style.height = "150px";
     document.getElementById(id).style.width = "150px";
-    document.getElementById(id).style.transition = "1s"
+    // document.getElementById(id).style.transition = "1s"
 }
 
 function makeNorm(x) {
@@ -210,21 +235,17 @@ function makeNorm(x) {
     document.getElementById(id).style.height = "30px";
     document.getElementById(id).style.width = "30px";
     document.getElementById(id).style.transition = "none"
-    
+
 }
 
-function openDetail(x){
+function openDetail(x) {
     let id = x.id + "Detail";
     let details = document.getElementsByClassName('detail');
-    
-    for(let i = 0; i < details.length; i++){
+
+    for (let i = 0; i < details.length; i++) {
         details[i].classList.remove('active');
     }
 
     document.getElementById(id).classList.add('active');
-}
 
-// function closeDetail(x){
-//     let id = x.id + "Detail";
-//     document.getElementById(id).classList.remove('active');  
-// }
+}
